@@ -53,5 +53,10 @@ namespace CP
         {
 
         }
+
+        private void labeltitulo1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

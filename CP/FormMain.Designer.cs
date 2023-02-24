@@ -55,10 +55,11 @@
             // btnAlta
             // 
             this.btnAlta.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlta.Location = new System.Drawing.Point(26, 95);
+            this.btnAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlta.Location = new System.Drawing.Point(30, 110);
+            this.btnAlta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(158, 36);
+            this.btnAlta.Size = new System.Drawing.Size(184, 42);
             this.btnAlta.TabIndex = 0;
             this.btnAlta.Text = "Alta";
             this.btnAlta.UseVisualStyleBackColor = false;
@@ -67,10 +68,11 @@
             // btnBaja
             // 
             this.btnBaja.BackColor = System.Drawing.Color.IndianRed;
-            this.btnBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaja.Location = new System.Drawing.Point(208, 95);
+            this.btnBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBaja.Location = new System.Drawing.Point(243, 110);
+            this.btnBaja.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBaja.Name = "btnBaja";
-            this.btnBaja.Size = new System.Drawing.Size(158, 36);
+            this.btnBaja.Size = new System.Drawing.Size(184, 42);
             this.btnBaja.TabIndex = 1;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = false;
@@ -79,10 +81,11 @@
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(395, 95);
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnModificar.Location = new System.Drawing.Point(461, 110);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(158, 36);
+            this.btnModificar.Size = new System.Drawing.Size(184, 42);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -102,9 +105,10 @@
             this.anio_pel,
             this.cant_pel});
             this.GrillaBD.GridColor = System.Drawing.Color.LightGray;
-            this.GrillaBD.Location = new System.Drawing.Point(12, 200);
+            this.GrillaBD.Location = new System.Drawing.Point(14, 231);
+            this.GrillaBD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GrillaBD.Name = "GrillaBD";
-            this.GrillaBD.Size = new System.Drawing.Size(1154, 301);
+            this.GrillaBD.Size = new System.Drawing.Size(1346, 347);
             this.GrillaBD.TabIndex = 3;
             this.GrillaBD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrillaBD_CellContentClick);
             // 
@@ -154,8 +158,9 @@
             // lblbuscar
             // 
             this.lblbuscar.AutoSize = true;
-            this.lblbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbuscar.Location = new System.Drawing.Point(23, 164);
+            this.lblbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblbuscar.Location = new System.Drawing.Point(27, 189);
+            this.lblbuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblbuscar.Name = "lblbuscar";
             this.lblbuscar.Size = new System.Drawing.Size(50, 13);
             this.lblbuscar.TabIndex = 4;
@@ -163,18 +168,20 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(72, 161);
+            this.txtBuscar.Location = new System.Drawing.Point(84, 186);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(275, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(320, 23);
             this.txtBuscar.TabIndex = 5;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnSalir
             // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(1091, 521);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(1273, 601);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(88, 27);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -185,9 +192,10 @@
             this.picBPeli.BackColor = System.Drawing.Color.Black;
             this.picBPeli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBPeli.Image = ((System.Drawing.Image)(resources.GetObject("picBPeli.Image")));
-            this.picBPeli.Location = new System.Drawing.Point(965, 31);
+            this.picBPeli.Location = new System.Drawing.Point(1126, 36);
+            this.picBPeli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picBPeli.Name = "picBPeli";
-            this.picBPeli.Size = new System.Drawing.Size(176, 119);
+            this.picBPeli.Size = new System.Drawing.Size(205, 137);
             this.picBPeli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBPeli.TabIndex = 7;
             this.picBPeli.TabStop = false;
@@ -196,19 +204,22 @@
             // 
             this.labeltitulo1.AutoSize = true;
             this.labeltitulo1.BackColor = System.Drawing.Color.Lavender;
-            this.labeltitulo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltitulo1.Location = new System.Drawing.Point(66, 31);
+            this.labeltitulo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labeltitulo1.Location = new System.Drawing.Point(77, 36);
+            this.labeltitulo1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labeltitulo1.Name = "labeltitulo1";
-            this.labeltitulo1.Size = new System.Drawing.Size(487, 33);
+            this.labeltitulo1.Size = new System.Drawing.Size(598, 33);
             this.labeltitulo1.TabIndex = 8;
-            this.labeltitulo1.Text = "BASE DE DATOS DE PELICULAS";
+            this.labeltitulo1.Text = "BASE DE DATOS DE PELICULAS LAFON";
+            this.labeltitulo1.Click += new System.EventHandler(this.labeltitulo1_Click);
             // 
             // labelTextoAdvertencia
             // 
             this.labelTextoAdvertencia.AutoSize = true;
-            this.labelTextoAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextoAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTextoAdvertencia.ForeColor = System.Drawing.Color.Red;
-            this.labelTextoAdvertencia.Location = new System.Drawing.Point(434, 168);
+            this.labelTextoAdvertencia.Location = new System.Drawing.Point(506, 194);
+            this.labelTextoAdvertencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTextoAdvertencia.Name = "labelTextoAdvertencia";
             this.labelTextoAdvertencia.Size = new System.Drawing.Size(732, 13);
             this.labelTextoAdvertencia.TabIndex = 9;
@@ -217,10 +228,10 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1178, 556);
+            this.ClientSize = new System.Drawing.Size(1374, 642);
             this.Controls.Add(this.labelTextoAdvertencia);
             this.Controls.Add(this.labeltitulo1);
             this.Controls.Add(this.picBPeli);
@@ -231,6 +242,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAlta);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormMain_Load);
