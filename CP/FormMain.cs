@@ -58,5 +58,10 @@ namespace CP
         {
 
         }
+
+        private void lblbuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,98 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_cancel_dir = new System.Windows.Forms.Button();
-            this.btn_alta_libros = new System.Windows.Forms.Button();
-            this.lbl_tit_dir = new System.Windows.Forms.Label();
-            this.lbl_nomb_dir = new System.Windows.Forms.Label();
-            this.lbl_id_dir = new System.Windows.Forms.Label();
-            this.txt_id_dir = new System.Windows.Forms.TextBox();
-            this.txt_nomb_dir = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            btn_cancel_dir = new Button();
+            btn_alta_libros = new Button();
+            lbl_tit_dir = new Label();
+            lbl_nomb_dir = new Label();
+            lbl_id_dir = new Label();
+            txt_id_dir = new TextBox();
+            txt_nomb_dir = new TextBox();
+            SuspendLayout();
             // 
             // btn_cancel_dir
             // 
-            this.btn_cancel_dir.Location = new System.Drawing.Point(272, 245);
-            this.btn_cancel_dir.Name = "btn_cancel_dir";
-            this.btn_cancel_dir.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancel_dir.TabIndex = 50;
-            this.btn_cancel_dir.Text = "Volver";
-            this.btn_cancel_dir.UseVisualStyleBackColor = true;
-            this.btn_cancel_dir.Click += new System.EventHandler(this.btn_cancel_dir_Click);
+            btn_cancel_dir.Location = new Point(317, 283);
+            btn_cancel_dir.Margin = new Padding(4, 3, 4, 3);
+            btn_cancel_dir.Name = "btn_cancel_dir";
+            btn_cancel_dir.Size = new Size(88, 27);
+            btn_cancel_dir.TabIndex = 50;
+            btn_cancel_dir.Text = "Volver";
+            btn_cancel_dir.UseVisualStyleBackColor = true;
+            btn_cancel_dir.Click += btn_cancel_dir_Click;
             // 
             // btn_alta_libros
             // 
-            this.btn_alta_libros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_alta_libros.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_alta_libros.Location = new System.Drawing.Point(105, 222);
-            this.btn_alta_libros.Name = "btn_alta_libros";
-            this.btn_alta_libros.Size = new System.Drawing.Size(138, 46);
-            this.btn_alta_libros.TabIndex = 49;
-            this.btn_alta_libros.Text = "Alta";
-            this.btn_alta_libros.UseVisualStyleBackColor = false;
+            btn_alta_libros.BackColor = Color.Bisque;
+            btn_alta_libros.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            btn_alta_libros.Location = new Point(122, 256);
+            btn_alta_libros.Margin = new Padding(4, 3, 4, 3);
+            btn_alta_libros.Name = "btn_alta_libros";
+            btn_alta_libros.Size = new Size(161, 53);
+            btn_alta_libros.TabIndex = 49;
+            btn_alta_libros.Text = "Alta";
+            btn_alta_libros.UseVisualStyleBackColor = false;
             // 
             // lbl_tit_dir
             // 
-            this.lbl_tit_dir.AutoSize = true;
-            this.lbl_tit_dir.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tit_dir.Location = new System.Drawing.Point(109, 36);
-            this.lbl_tit_dir.Name = "lbl_tit_dir";
-            this.lbl_tit_dir.Size = new System.Drawing.Size(158, 27);
-            this.lbl_tit_dir.TabIndex = 48;
-            this.lbl_tit_dir.Text = "Alta Directores";
+            lbl_tit_dir.AutoSize = true;
+            lbl_tit_dir.BackColor = Color.Tan;
+            lbl_tit_dir.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_tit_dir.Location = new Point(127, 42);
+            lbl_tit_dir.Margin = new Padding(4, 0, 4, 0);
+            lbl_tit_dir.Name = "lbl_tit_dir";
+            lbl_tit_dir.Size = new Size(158, 27);
+            lbl_tit_dir.TabIndex = 48;
+            lbl_tit_dir.Text = "Alta Directores";
             // 
             // lbl_nomb_dir
             // 
-            this.lbl_nomb_dir.AutoSize = true;
-            this.lbl_nomb_dir.Location = new System.Drawing.Point(19, 144);
-            this.lbl_nomb_dir.Name = "lbl_nomb_dir";
-            this.lbl_nomb_dir.Size = new System.Drawing.Size(84, 13);
-            this.lbl_nomb_dir.TabIndex = 47;
-            this.lbl_nomb_dir.Text = "Nombre Director";
+            lbl_nomb_dir.AutoSize = true;
+            lbl_nomb_dir.BackColor = Color.Tan;
+            lbl_nomb_dir.Location = new Point(22, 166);
+            lbl_nomb_dir.Margin = new Padding(4, 0, 4, 0);
+            lbl_nomb_dir.Name = "lbl_nomb_dir";
+            lbl_nomb_dir.Size = new Size(96, 15);
+            lbl_nomb_dir.TabIndex = 47;
+            lbl_nomb_dir.Text = "Nombre Director";
             // 
             // lbl_id_dir
             // 
-            this.lbl_id_dir.AutoSize = true;
-            this.lbl_id_dir.Location = new System.Drawing.Point(19, 103);
-            this.lbl_id_dir.Name = "lbl_id_dir";
-            this.lbl_id_dir.Size = new System.Drawing.Size(80, 13);
-            this.lbl_id_dir.TabIndex = 46;
-            this.lbl_id_dir.Text = "Codigo Director";
+            lbl_id_dir.AutoSize = true;
+            lbl_id_dir.BackColor = Color.Tan;
+            lbl_id_dir.Location = new Point(22, 119);
+            lbl_id_dir.Margin = new Padding(4, 0, 4, 0);
+            lbl_id_dir.Name = "lbl_id_dir";
+            lbl_id_dir.Size = new Size(91, 15);
+            lbl_id_dir.TabIndex = 46;
+            lbl_id_dir.Text = "Codigo Director";
             // 
             // txt_id_dir
             // 
-            this.txt_id_dir.Enabled = false;
-            this.txt_id_dir.Location = new System.Drawing.Point(114, 100);
-            this.txt_id_dir.Name = "txt_id_dir";
-            this.txt_id_dir.Size = new System.Drawing.Size(101, 20);
-            this.txt_id_dir.TabIndex = 45;
+            txt_id_dir.Enabled = false;
+            txt_id_dir.Location = new Point(133, 115);
+            txt_id_dir.Margin = new Padding(4, 3, 4, 3);
+            txt_id_dir.Name = "txt_id_dir";
+            txt_id_dir.Size = new Size(117, 23);
+            txt_id_dir.TabIndex = 45;
             // 
             // txt_nomb_dir
             // 
-            this.txt_nomb_dir.Location = new System.Drawing.Point(114, 141);
-            this.txt_nomb_dir.Name = "txt_nomb_dir";
-            this.txt_nomb_dir.Size = new System.Drawing.Size(218, 20);
-            this.txt_nomb_dir.TabIndex = 44;
+            txt_nomb_dir.Location = new Point(133, 163);
+            txt_nomb_dir.Margin = new Padding(4, 3, 4, 3);
+            txt_nomb_dir.Name = "txt_nomb_dir";
+            txt_nomb_dir.Size = new Size(254, 23);
+            txt_nomb_dir.TabIndex = 44;
             // 
             // FormAltaDirector
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(359, 280);
-            this.Controls.Add(this.btn_cancel_dir);
-            this.Controls.Add(this.btn_alta_libros);
-            this.Controls.Add(this.lbl_tit_dir);
-            this.Controls.Add(this.lbl_nomb_dir);
-            this.Controls.Add(this.lbl_id_dir);
-            this.Controls.Add(this.txt_id_dir);
-            this.Controls.Add(this.txt_nomb_dir);
-            this.Name = "FormAltaDirector";
-            this.Text = "FormAltaDirector";
-            this.Load += new System.EventHandler(this.FormAltaDirector_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 255);
+            BackgroundImage = Properties.Resources.descarga;
+            ClientSize = new Size(419, 323);
+            Controls.Add(btn_cancel_dir);
+            Controls.Add(btn_alta_libros);
+            Controls.Add(lbl_tit_dir);
+            Controls.Add(lbl_nomb_dir);
+            Controls.Add(lbl_id_dir);
+            Controls.Add(txt_id_dir);
+            Controls.Add(txt_nomb_dir);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FormAltaDirector";
+            Text = "FormAltaDirector";
+            Load += FormAltaDirector_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
