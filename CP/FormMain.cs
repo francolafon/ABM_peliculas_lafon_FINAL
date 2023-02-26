@@ -73,5 +73,10 @@ namespace CP
         {
             this.Close();
         }
+
+        private void btnSalir_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
