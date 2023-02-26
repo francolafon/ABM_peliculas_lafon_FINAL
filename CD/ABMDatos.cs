@@ -31,7 +31,7 @@ namespace CD
             }
             catch (Exception e)
             {
-                throw new Exception("Error al listar Rubros", e);
+                throw new Exception("Error al listar Peliculas", e);
             }
             finally
             {

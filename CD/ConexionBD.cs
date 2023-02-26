@@ -23,7 +23,7 @@ namespace CD
             var conn = new OleDbConnection(_connString);
             conn.Close();
             return conn;
-
         }
+
     }
 }

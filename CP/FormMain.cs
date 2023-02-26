@@ -5,16 +5,10 @@ namespace CP
 {
     public partial class FormMain : Form
     {
-        private object cb_Peliculas;
 
         public FormMain()
         {
             InitializeComponent();
-        }
-
-        private void LlenarCombos()
-        {
-
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
@@ -41,17 +35,7 @@ namespace CP
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            this.FormClosed += new FormClosedEventHandler(btnSalir_Click);
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void GrillaBD_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            
         }
 
         private void labeltitulo1_Click(object sender, EventArgs e)
@@ -69,10 +53,33 @@ namespace CP
 
         }
 
-        private void btnSalir_Click_1(object sender, EventArgs e)
+        #region DGV_Peliculas
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.Close();
+
         }
+
+        private void crear_dgv_peliculas()
+        {
+            dgv_peliculas.Columns.Add("0", "ID");
+            dgv_peliculas.Columns.Add("1", "DIRECTOR");
+            dgv_peliculas.Columns.Add("2", "CATEGORIA");
+            dgv_peliculas.Columns.Add("3", "PRODUCTORA");
+            dgv_peliculas.Columns.Add("4", "TITULO");
+            dgv_peliculas.Columns.Add("5", "DESCRIPCION");
+            dgv_peliculas.Columns.Add("6", "CANTIDAD");
+            dgv_peliculas.Columns.Add("7", "AÑO");
+
+            dgv_peliculas.Columns[0].Width = 100;
+            dgv_peliculas.Columns[1].Width = 100;
+            dgv_peliculas.Columns[2].Width = 100;
+            dgv_peliculas.Columns[3].Width = 100;
+            dgv_peliculas.Columns[4].Width = 100;
+            dgv_peliculas.Columns[5].Width = 100;
+            dgv_peliculas.Columns[6].Width = 100;
+
+        }
+        #endregion
 
         private void btnSalir_Click_2(object sender, EventArgs e)
         {

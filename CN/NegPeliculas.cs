@@ -11,6 +11,7 @@ namespace CN
         public List<Peliculas> ListarPeliculas()
         {
             return objDatosPeliculas.ObtenerPeliculas();
+            //devuelve las peliculas de la base de datos en un list
         }
     }
 
