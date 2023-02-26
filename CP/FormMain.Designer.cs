@@ -61,7 +61,7 @@
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(184, 42);
             this.btnAlta.TabIndex = 0;
-            this.btnAlta.Text = "Alta";
+            this.btnAlta.Text = "Alta FRANCO";
             this.btnAlta.UseVisualStyleBackColor = false;
             this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
@@ -105,7 +105,7 @@
             this.anio_pel,
             this.cant_pel});
             this.GrillaBD.GridColor = System.Drawing.Color.LightGray;
-            this.GrillaBD.Location = new System.Drawing.Point(-108, -20);
+            this.GrillaBD.Location = new System.Drawing.Point(13, 248);
             this.GrillaBD.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GrillaBD.Name = "GrillaBD";
             this.GrillaBD.Size = new System.Drawing.Size(1346, 347);
