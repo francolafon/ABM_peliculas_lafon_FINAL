@@ -94,7 +94,7 @@ namespace CP
             {
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    dgv_peliculas.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
+                    dgv_peliculas.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString());
                 }
             }
             else
