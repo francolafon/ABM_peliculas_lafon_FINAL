@@ -1,8 +1,11 @@
-﻿namespace CP
+﻿using CN;
+using System.Data;
+
+namespace CP
 {
     public partial class FormMain : Form
     {
-        //NegPeliculas ObjPeliculas = new NegPeliculas();
+        NegPeliculas ObjPeliculas = new NegPeliculas();
 
         public FormMain()
         {
@@ -82,20 +85,20 @@
 
         private void Cargar_dgv_peliculas()
         {
-            //dgv_peliculas.Rows.Clear();
-            //dgv_peliculas.Rows.Add();
-            //DataSet ds = new DataSet();
-            //ds = ObjPeliculas.lista_de_peliculas("Cargar");
+            dgv_peliculas.Rows.Clear();
+            dgv_peliculas.Rows.Add();
+            DataSet ds = new DataSet();
+            ds = ObjPeliculas.lista_de_peliculas("Cargar");
 
-            //if (ds.Tables[0].Rows.Count > 0)
-            //{
-            //    foreach (DataRow dr in ds.Tables[0].Rows)
-            //    {
-            //        dgv_peliculas.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5], dr[6].ToString(), dr[7].ToString());
-            //    }
-            //}
-            //else
-            //    MessageBox.Show("No hay Peliculas cargadas en el sistema");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dgv_peliculas.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
+                }
+            }
+            else
+                MessageBox.Show("No hay Peliculas cargadas en el sistema");
         }
 
         #endregion
