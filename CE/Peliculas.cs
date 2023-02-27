@@ -1,4 +1,6 @@
-﻿namespace CE
+﻿using System;
+
+namespace CE
 {
     public class Peliculas
     {
@@ -11,6 +13,10 @@
         private int cant_pel;
         private int anio_pel;
 
+        public int ABM_Peliculas(string v, string accion, Peliculas objPeliculas)
+        {
+            throw new NotImplementedException();
+        }
 
         public int Id_pel
         {

@@ -1,29 +1,46 @@
-﻿using System.Data.OleDb;
+﻿using System;
+using System.Data;
+using System.Data.OleDb;
 
 namespace CD
 {
-    internal class ConexionBD
+    public class ConexionBD
     {
-        private readonly string _connString;
+        protected OleDbConnection conexion;
+        public OleDbDataReader reader;
+        protected string cadenaCon = @"Provider=Microsoft.Jet.OLEDB.4.0;;Data Source=C:\DataBases\PersFinal.mdb";
+
         public ConexionBD()
         {
-            //Cadena de conexion para Access 2019
-            _connString = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\\Users\\Franco\\source\\repos\\CP\\CD\\BDpelis.accdb";
+            conexion = new OleDbConnection(cadenaCon);
         }
-
-        public OleDbConnection Abrir()
+        public void AbrirConexion()//Abre conexión.
         {
-            var conn = new OleDbConnection(_connString);
-            conn.Open();
-            return conn;
-
+            try
+            {
+                if (conexion.State == ConnectionState.Broken || conexion.State == ConnectionState.Closed)
+                {
+                    conexion.Open();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error\n\n", e);
+            }
         }
-        public OleDbConnection Cerrar()
+        public void CerrarConexion()//Cierra conexión.
         {
-            var conn = new OleDbConnection(_connString);
-            conn.Close();
-            return conn;
+            try
+            {
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error\n\n", e);
+            }
         }
-
     }
 }

@@ -35,12 +35,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.picBPeli = new System.Windows.Forms.PictureBox();
             this.labeltitulo1 = new System.Windows.Forms.Label();
             this.labelTextoAdvertencia = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dgv_peliculas = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.picBPeli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_peliculas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,26 +100,13 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(1071, 554);
+            this.btnSalir.Location = new System.Drawing.Point(1304, 549);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(88, 27);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_2);
-            // 
-            // picBPeli
-            // 
-            this.picBPeli.BackColor = System.Drawing.Color.Black;
-            this.picBPeli.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBPeli.Location = new System.Drawing.Point(1126, 36);
-            this.picBPeli.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.picBPeli.Name = "picBPeli";
-            this.picBPeli.Size = new System.Drawing.Size(205, 137);
-            this.picBPeli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBPeli.TabIndex = 7;
-            this.picBPeli.TabStop = false;
             // 
             // labeltitulo1
             // 
@@ -152,7 +137,7 @@
             // 
             this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InfoText;
-            this.dateTimePicker1.Location = new System.Drawing.Point(941, 25);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1174, 35);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(218, 23);
             this.dateTimePicker1.TabIndex = 10;
@@ -169,9 +154,8 @@
             this.dgv_peliculas.Name = "dgv_peliculas";
             this.dgv_peliculas.ReadOnly = true;
             this.dgv_peliculas.RowTemplate.Height = 25;
-            this.dgv_peliculas.Size = new System.Drawing.Size(1088, 272);
+            this.dgv_peliculas.Size = new System.Drawing.Size(1362, 272);
             this.dgv_peliculas.TabIndex = 11;
-            this.dgv_peliculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // FormMain
             // 
@@ -179,12 +163,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::CP.Properties.Resources._9859bcf103e15c74671b14f350799207;
-            this.ClientSize = new System.Drawing.Size(1177, 600);
+            this.ClientSize = new System.Drawing.Size(1418, 600);
             this.Controls.Add(this.dgv_peliculas);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labelTextoAdvertencia);
             this.Controls.Add(this.labeltitulo1);
-            this.Controls.Add(this.picBPeli);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblbuscar);
@@ -194,7 +177,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormMain";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.picBPeli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_peliculas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,7 +192,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.PictureBox picBPeli;
         private System.Windows.Forms.Label labeltitulo1;
         private System.Windows.Forms.Label labelTextoAdvertencia;
         private DateTimePicker dateTimePicker1;

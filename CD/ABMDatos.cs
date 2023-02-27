@@ -1,44 +1,42 @@
-﻿using CE;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.Data;
 using System.Data.OleDb;
+
 
 namespace CD
 {
-    public class ABMDatos
+    public class ABMDatos : ConexionBD
     {
-        public List<Peliculas> ObtenerPeliculas()
+        public DataSet listaPeliculas(string cual)
         {
-            var conn = new OleDbConnection();
-            var comando = new OleDbCommand();
-            var base_de_datos = new ConexionBD();
-            List<Peliculas> lista = new List<Peliculas>();
+            string orden = string.Empty;
 
-            string orden = "Select Id_pel, titulo From Peliculas";
-            OleDbCommand cmd = new OleDbCommand(orden, conn);
-            OleDbDataReader dr;
+            if (cual != "Cargar")
+                orden = "SELECT Peliculas.id_pel, Peliculas.id_director, Peliculas.id_categoria, Peliculas.titulo, Peliculas.desc_pel, Peliculas.cant_pel, Peliculas.anio_pel FROM Peliculas WHERE id_pel = " + int.Parse(cual) + ";";
+            else
+                orden = "SELECT Peliculas.id_pel, Peliculas.id_director, Peliculas.id_categoria, Peliculas.titulo, Peliculas.desc_pel, Peliculas.cant_pel, Peliculas.anio_pel FROM Peliculas;";
+
+            OleDbCommand cmd = new OleDbCommand(orden, conexion);
+            DataSet ds = new DataSet();
+            OleDbDataAdapter da = new OleDbDataAdapter();
+
             try
             {
-                conn = base_de_datos.Abrir();
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    Peliculas P = new Peliculas();// instancio P como un objeto Pelicula
-                    P.Id_pel = dr.GetInt32(0);
-                    P.Titulo = dr.GetString(4);
-                    lista.Add(P);
-                }
+                AbrirConexion();
+                cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
             }
             catch (Exception e)
             {
-                throw new Exception("Error al listar Peliculas", e);
+                throw new Exception("Error al listar Profesores", e);
             }
             finally
             {
-                conn = base_de_datos.Cerrar();
+                CerrarConexion();
                 cmd.Dispose();
             }
-            return lista;
+            return ds;
         }
     }
 }
