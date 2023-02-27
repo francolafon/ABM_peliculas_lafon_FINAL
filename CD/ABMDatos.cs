@@ -12,9 +12,9 @@ namespace CD
             string orden = string.Empty;
 
             if (cual != "Cargar")
-                orden = "SELECT Peliculas.id_pel, Peliculas.id_director, Peliculas.id_categoria, Peliculas.id_productora, Peliculas.titulo, Peliculas.desc_pel, Peliculas.cant_pel, Peliculas.anio_pel FROM Peliculas WHERE id_pel = " + int.Parse(cual) + ";";
+                orden = "SELECT Peliculas.id_pel, Peliculas.titulo, Peliculas.id_categoria, Peliculas.id_director, Peliculas.id_productora,  Peliculas.desc_pel, Peliculas.cant_pel, Peliculas.anio_pel FROM Peliculas WHERE id_pel = " + int.Parse(cual) + ";";
             else
-                orden = "SELECT Peliculas.id_pel, Peliculas.id_director, Peliculas.id_categoria, Peliculas.id_productora, Peliculas.titulo, Peliculas.desc_pel, Peliculas.cant_pel, Peliculas.anio_pel FROM Peliculas;";
+                orden = "SELECT Peliculas.id_pel, Peliculas.titulo, Peliculas.id_categoria, Peliculas.id_director, Peliculas.id_productora,  Peliculas.desc_pel, Peliculas.cant_pel, Peliculas.anio_pel FROM Peliculas;";
 
             OleDbCommand cmd = new OleDbCommand(orden, conexion);
             DataSet ds = new DataSet();
