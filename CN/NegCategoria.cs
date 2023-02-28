@@ -10,5 +10,11 @@ namespace CN
 {
     public class NegCategoria
     {
+        AbmCategoria ObjDatosCategorias = new AbmCategoria();
+        //LISTADO DE DATOS
+        public List<Categorias> ObtenerCategorias()
+        {
+            return ObjDatosCategorias.ObtenerCategorias();
+        }
     }
 }

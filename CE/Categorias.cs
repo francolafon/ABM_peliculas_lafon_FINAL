@@ -4,7 +4,7 @@
     {
         private int id_categoria;
         private int id_ubicacion;
-        private int nomb_categoria;
+        private string nomb_categoria;
 
         public Categorias()
         {
@@ -21,7 +21,7 @@
             set { id_ubicacion = value; }
         }
 
-        public int Nomb_categoria
+        public string Nomb_categoria
         {
             get { return nomb_categoria; }
             set { nomb_categoria = value; }

@@ -3,7 +3,7 @@
     public class Directores
     {
         private int id_director;
-        private int nomb_director;
+        private string nomb_director;
 
         public Directores()
         {
@@ -15,7 +15,7 @@
             set { id_director = value; }
         }
 
-        public int Nomb_director
+        public string Nomb_director
         {
             get { return nomb_director; }
             set { nomb_director = value; }

@@ -9,7 +9,7 @@ using CD;
 
 namespace CN
 {
-    //continuar!
+
     public class NegProductora
     {
         AbmProductora ObjDatosProductoras = new AbmProductora();

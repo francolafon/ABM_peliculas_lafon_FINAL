@@ -10,15 +10,16 @@ namespace CP
         FormMain formMain;
         NegPeliculas negPeliculas = new NegPeliculas();
         NegProductora negProductora = new NegProductora();
+        NegDirector negDirector = new NegDirector();
+        NegCategoria negCategoria = new NegCategoria();
 
         public FormAlta()
         {
             InitializeComponent();
+            //llenado de cbx
             LlenarCbxProductoras();
-            //CombBoxs
-            //cb_dir.Items.Add(1);
-            //cb_prod.Items.Add(1);
-            //cb_cat.Items.Add(1);
+            LlenarCbxDirectores();
+            LlenarCbxCategorias();
         }
 
         private void FormAlta_Load(object sender, EventArgs e)
@@ -43,15 +44,26 @@ namespace CP
             this.Close();
         }
 
+        private void dtp_pel_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fecha_pel = dtp_pel.Value;
+            string fecha_pel_anio = fecha_pel.ToString("yyyy");
+            int fecha_pel_anio_2 = Int32.Parse(fecha_pel_anio);
+        }
+
         private void btn_alta_pel_Click(object sender, EventArgs e)
         {
             if (txt_titulo_pel.Text != "" && cb_dir.Text != "" && cb_prod.Text != "" && cb_cat.Text != "" && txt_desc.Text != "")//faltan agregar campos
             {
                 int nGrabados = -1;
 
-                peliculas = new Peliculas(Convert.ToInt32(cb_dir.SelectedItem), Convert.ToInt32(cb_prod.SelectedItem), Convert.ToInt32(cb_cat.SelectedItem), txt_titulo_pel.Text, txt_desc.Text, Convert.ToInt32(txt_cant.Text), Convert.ToInt32(cal_pel_3.Text));
-                //prueba de carga
-                //peliculas = new Peliculas(1,1,1,"prueba 5", "prueba 5 desc",3,2025);
+                //falta terminar calendario
+                DateTime fecha_pel = dtp_pel.Value;
+                string fecha_pel_anio = fecha_pel.ToString("yyyy");
+                int fecha_pel_anio_2 = Int32.Parse(fecha_pel_anio);
+                //
+
+                peliculas = new Peliculas(Convert.ToInt32(cb_dir.SelectedValue), Convert.ToInt32(cb_prod.SelectedValue), Convert.ToInt32(cb_cat.SelectedValue), txt_titulo_pel.Text, txt_desc.Text, Convert.ToInt32(txt_cant.Text), fecha_pel_anio_2);
                 nGrabados = negPeliculas.ABM_Pelicula("INSERT", peliculas);
 
                 if (nGrabados == -1)
@@ -93,10 +105,22 @@ namespace CP
         void LlenarCbxProductoras()
         {
             cb_prod.DataSource = negProductora.ObtenerProductoras();
-            cb_prod.DisplayMember = "id_productora";
+            cb_prod.ValueMember = "id_productora";
             cb_prod.DisplayMember = "nomb_productora";
+
         }
-
-
+        
+        void LlenarCbxDirectores() 
+            {
+                cb_dir.DataSource = negDirector.ObtenerDirectores();
+                cb_dir.ValueMember = "id_director";
+                cb_dir.DisplayMember = "nomb_director";
+            }
+            void LlenarCbxCategorias()
+            {
+            cb_cat.DataSource = negCategoria.ObtenerCategorias();
+            cb_cat.ValueMember = "id_categoria";
+            cb_cat.DisplayMember = "nomb_categoria";
+        }
     }
 }

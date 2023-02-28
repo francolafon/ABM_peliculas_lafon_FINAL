@@ -48,9 +48,8 @@
             this.txt_cant = new System.Windows.Forms.TextBox();
             this.btn_alta_pel = new System.Windows.Forms.Button();
             this.btn_cancel1 = new System.Windows.Forms.Button();
-            this.cal_pel = new System.Windows.Forms.MonthCalendar();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cal_pel_3 = new System.Windows.Forms.TextBox();
+            this.dtp_pel = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // txt_titulo_pel
@@ -199,7 +198,7 @@
             // 
             this.lbl_cant.AutoSize = true;
             this.lbl_cant.BackColor = System.Drawing.Color.Tan;
-            this.lbl_cant.Location = new System.Drawing.Point(43, 472);
+            this.lbl_cant.Location = new System.Drawing.Point(38, 367);
             this.lbl_cant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cant.Name = "lbl_cant";
             this.lbl_cant.Size = new System.Drawing.Size(55, 15);
@@ -222,7 +221,7 @@
             // 
             this.lbl_anio.AutoSize = true;
             this.lbl_anio.BackColor = System.Drawing.Color.Tan;
-            this.lbl_anio.Location = new System.Drawing.Point(35, 362);
+            this.lbl_anio.Location = new System.Drawing.Point(38, 317);
             this.lbl_anio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_anio.Name = "lbl_anio";
             this.lbl_anio.Size = new System.Drawing.Size(96, 15);
@@ -231,7 +230,7 @@
             // 
             // txt_cant
             // 
-            this.txt_cant.Location = new System.Drawing.Point(144, 469);
+            this.txt_cant.Location = new System.Drawing.Point(144, 364);
             this.txt_cant.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txt_cant.Name = "txt_cant";
             this.txt_cant.Size = new System.Drawing.Size(117, 23);
@@ -261,15 +260,6 @@
             this.btn_cancel1.UseVisualStyleBackColor = true;
             this.btn_cancel1.Click += new System.EventHandler(this.btn_cancel1_Click_1);
             // 
-            // cal_pel
-            // 
-            this.cal_pel.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
-            this.cal_pel.BackColor = System.Drawing.Color.Gray;
-            this.cal_pel.Location = new System.Drawing.Point(144, 295);
-            this.cal_pel.Name = "cal_pel";
-            this.cal_pel.TabIndex = 23;
-            this.cal_pel.TrailingForeColor = System.Drawing.SystemColors.ButtonFace;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(535, 335);
@@ -278,13 +268,13 @@
             this.textBox1.Size = new System.Drawing.Size(185, 23);
             this.textBox1.TabIndex = 24;
             // 
-            // cal_pel_3
+            // dtp_pel
             // 
-            this.cal_pel_3.Location = new System.Drawing.Point(357, 464);
-            this.cal_pel_3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cal_pel_3.Name = "cal_pel_3";
-            this.cal_pel_3.Size = new System.Drawing.Size(117, 23);
-            this.cal_pel_3.TabIndex = 25;
+            this.dtp_pel.Location = new System.Drawing.Point(142, 311);
+            this.dtp_pel.Name = "dtp_pel";
+            this.dtp_pel.Size = new System.Drawing.Size(227, 23);
+            this.dtp_pel.TabIndex = 26;
+            this.dtp_pel.ValueChanged += new System.EventHandler(this.dtp_pel_ValueChanged);
             // 
             // FormAlta
             // 
@@ -293,9 +283,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::CP.Properties.Resources.Movie_aesthetic_uwu;
             this.ClientSize = new System.Drawing.Size(532, 586);
-            this.Controls.Add(this.cal_pel_3);
+            this.Controls.Add(this.dtp_pel);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.cal_pel);
             this.Controls.Add(this.btn_cancel1);
             this.Controls.Add(this.btn_alta_pel);
             this.Controls.Add(this.txt_cant);
@@ -346,9 +335,8 @@
         private System.Windows.Forms.TextBox txt_cant;
         private System.Windows.Forms.Button btn_alta_pel;
         private System.Windows.Forms.Button btn_cancel1;
-        private MonthCalendar cal_pel;
         private TextBox textBox1;
-        private TextBox cal_pel_3;
         private TextBox lb_id_pel;
+        private DateTimePicker dtp_pel;
     }
 }

@@ -10,6 +10,11 @@ namespace CN
 {
     public class NegDirector
     {
-
+        AbmDirector ObjDatosDirectores = new AbmDirector();
+        //LISTADO DE DATOS
+        public List<Directores> ObtenerDirectores()
+        {
+            return ObjDatosDirectores.ObtenerDirectores();
+        }
     }
 }
