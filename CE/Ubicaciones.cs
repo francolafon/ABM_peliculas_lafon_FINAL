@@ -5,6 +5,10 @@
         private int id_ubicacion;
         private int nomb_ubicacion;
 
+        public Ubicaciones()
+        {
+
+        }
         public int Id_productora
         {
             get { return id_ubicacion; }

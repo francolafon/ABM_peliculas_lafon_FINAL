@@ -1,6 +1,6 @@
 ﻿namespace CD
 {
-    internal class AbmPelicula
+    internal class AbmPelicula : ConexionBD
     {
     }
 }

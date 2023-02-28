@@ -5,6 +5,10 @@
         private int id_director;
         private int nomb_director;
 
+        public Directores()
+        {
+
+        }
         public int Id_director
         {
             get { return id_director; }

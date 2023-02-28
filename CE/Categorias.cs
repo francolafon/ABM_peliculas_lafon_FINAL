@@ -6,6 +6,10 @@
         private int id_ubicacion;
         private int nomb_categoria;
 
+        public Categorias()
+        {
+
+        }
         public int Id_categoria
         {
             get { return id_categoria; }

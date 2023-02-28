@@ -9,14 +9,16 @@ namespace CP
         //NegPeliculas negPeliculas;
         FormMain formMain;
         NegPeliculas negPeliculas = new NegPeliculas();
+        NegProductora negProductora = new NegProductora();
 
         public FormAlta()
         {
             InitializeComponent();
+            LlenarCbxProductoras();
             //CombBoxs
-            cb_dir.Items.Add(1);
-            cb_prod.Items.Add(1);
-            cb_cat.Items.Add(1);
+            //cb_dir.Items.Add(1);
+            //cb_prod.Items.Add(1);
+            //cb_cat.Items.Add(1);
         }
 
         private void FormAlta_Load(object sender, EventArgs e)
@@ -86,7 +88,14 @@ namespace CP
             formulario.Show();
         }
 
-        
+        //Combo box
+
+        void LlenarCbxProductoras()
+        {
+            cb_prod.DataSource = negProductora.ObtenerProductoras();
+            cb_prod.DisplayMember = "id_productora";
+            cb_prod.DisplayMember = "nomb_productora";
+        }
 
 
     }
