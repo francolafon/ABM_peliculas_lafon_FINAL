@@ -54,7 +54,11 @@ namespace CD
 
             if (accion == "DELETE")
                 orden = "DELETE FROM Peliculas WHERE(id_pel = " + ObjPelicula.Id_pel + ")";
-            
+
+            if (accion == "UPDATE")
+
+                orden = "UPDATE Peliculas SET id_director=" + ObjPelicula.Id_director + ",id_categoria=" + ObjPelicula.Id_categoria + ",id_productora=" + ObjPelicula.Id_productora + ",titulo=" + ObjPelicula.Titulo + ",desc_pel=" + ObjPelicula.Desc_pel + ",cant_pel=" + ObjPelicula.Cant_pel + ",anio_pel=" + ObjPelicula.Anio_pel + " WHERE id_pel= " + ObjPelicula.Id_pel+";";
+
 
             OleDbCommand cmd = new OleDbCommand(orden, conexion);
             try

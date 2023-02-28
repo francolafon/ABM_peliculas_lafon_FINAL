@@ -15,7 +15,6 @@ namespace CP
             Crear_dgv_peliculas();
             Cargar_dgv_peliculas();
         }
-
         private void BtnAlta_Click(object sender, EventArgs e)
         {
             Form formulario = new FormAlta(this);
@@ -24,7 +23,9 @@ namespace CP
  
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            Form formulario = new FormModificar();
+            //string valor2;
+            //valor2= dgv_peliculas.Rows[dgv_peliculas.CurrentRow.Index].Cells[0].Value.ToString();
+            Form formulario = new FormModificar(this);
             formulario.Show();
         }
 
@@ -117,7 +118,7 @@ namespace CP
 
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
-            Form formulario = new FormModificar();
+            Form formulario = new FormModificar(this);
             formulario.Show();
         }
 
