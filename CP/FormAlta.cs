@@ -63,24 +63,24 @@ namespace CP
                 string fecha_pel_anio = fecha_pel.ToString("yyyy");
                 int fecha_pel_anio_2 = Int32.Parse(fecha_pel_anio);
 
-                //peliculas = new Peliculas(Convert.ToInt32(cb_dir.SelectedValue), Convert.ToInt32(cb_prod.SelectedValue), Convert.ToInt32(cb_cat.SelectedValue), txt_titulo_pel.Text, txt_desc.Text, Convert.ToInt32(txt_cant.Text), fecha_pel_anio_2);
+                
                 peliculas = new Peliculas(Convert.ToInt32(cb_dir.SelectedValue), Convert.ToInt32(cb_prod.SelectedValue), Convert.ToInt32(cb_cat.SelectedValue), txt_titulo_pel.Text, txt_desc.Text, Convert.ToInt32(nud_cant.Value), fecha_pel_anio_2);
                 nGrabados = negPeliculas.ABM_Pelicula("INSERT", peliculas);
 
                 if (nGrabados == -1)
                 {
-                    MessageBox.Show("No se pudo grabar el en el sistema", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo agregar la pelicula el en el sistema", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     formMain.Cargar_dgv_peliculas();
-                    MessageBox.Show("El  fue agregado correctamente.", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("La pelicula fue agregada correctamente.", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("ERROR NO ENTRA", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("ERROR", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

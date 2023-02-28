@@ -9,14 +9,20 @@ namespace CN
 
         //ALTA BAJA MODIFICAR
         public int ABM_Pelicula(string accion, Peliculas ObjPelicula)
-        { 
+        {
             return DatosObjPeliculas.ABM_Pelicula(accion, ObjPelicula);
         }
-      
+
         //LISTADO DE DATOS
         public DataSet lista_de_peliculas(string cual)
         {
             return DatosObjPeliculas.listaPeliculas(cual);
+        }
+
+        //BUSQUEDA DE DATOS
+        public DataSet busca_de_peliculas(string cual, string dato)
+        {
+            return DatosObjPeliculas.BuscarPeliculas(cual, dato);
         }
     }
 }

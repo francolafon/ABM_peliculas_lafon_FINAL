@@ -38,6 +38,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dgv_peliculas = new System.Windows.Forms.DataGridView();
             this.btn_baja_pel = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_peliculas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,6 +148,16 @@
             this.btn_baja_pel.UseVisualStyleBackColor = false;
             this.btn_baja_pel.Click += new System.EventHandler(this.btn_baja_pel_Click);
             // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Location = new System.Drawing.Point(412, 209);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.TabIndex = 13;
+            this.btn_buscar.Text = "BUSCAR";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -154,6 +165,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::CP.Properties.Resources._9859bcf103e15c74671b14f350799207;
             this.ClientSize = new System.Drawing.Size(1418, 600);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_baja_pel);
             this.Controls.Add(this.dgv_peliculas);
             this.Controls.Add(this.dateTimePicker1);
@@ -184,5 +196,6 @@
         private DateTimePicker dateTimePicker1;
         private DataGridView dgv_peliculas;
         private Button btn_baja_pel;
+        private Button btn_buscar;
     }
 }

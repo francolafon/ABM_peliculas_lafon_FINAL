@@ -151,5 +151,27 @@ namespace CP
                     }
                 }
         }
+
+        //buscar peliculas
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+
+            dgv_peliculas.Rows.Clear();
+
+            DataSet ds = new DataSet();
+            ds = ObjPeliculas.busca_de_peliculas("Buscar", txtBuscar.Text);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dgv_peliculas.Rows.Add(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error", "No se encuentra la película");
+                Refresh();
+            }
+        }
     }
 }
