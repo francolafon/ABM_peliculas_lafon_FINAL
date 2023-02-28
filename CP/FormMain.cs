@@ -1,5 +1,7 @@
 ﻿using CN;
+using CE;
 using System.Data;
+
 
 namespace CP
 {
@@ -83,7 +85,7 @@ namespace CP
             dgv_peliculas.Columns[7].Width = 120;
         }
 
-        private void Cargar_dgv_peliculas()
+        public void Cargar_dgv_peliculas()
         {
             dgv_peliculas.Rows.Clear();
             dgv_peliculas.Rows.Add();
@@ -99,19 +101,34 @@ namespace CP
             }
             else
                 MessageBox.Show("No hay Peliculas cargadas en el sistema");
+            dgv_peliculas.AllowUserToAddRows = false;
+            dgv_peliculas.RowHeadersVisible = false;
         }
 
         #endregion
 
 
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+       
         private void Dgv_peliculas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnAlta_Click_1(object sender, EventArgs e)
+        {
+            Form formulario = new FormAlta();
+            formulario.Show();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            Form formulario = new FormModificar();
+            formulario.Show();
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

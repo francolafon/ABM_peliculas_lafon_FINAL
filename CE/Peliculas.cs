@@ -13,10 +13,34 @@ namespace CE
         private int cant_pel;
         private int anio_pel;
 
+        public Peliculas(int idDir, int idCat, int idProd, string tit, string desc, int cant, int anio)
+        { 
+            id_director = idDir;
+            id_productora = idProd;
+            id_categoria = idCat;
+            titulo = tit;
+            desc_pel = desc;
+            cant_pel = cant;
+            anio_pel = anio;
+
+        }
+        public Peliculas()
+        {
+            id_director = 0;
+            id_categoria = 0;
+            id_director = 0;
+            id_productora = 0;
+            titulo = "";
+            desc_pel = "";
+            cant_pel = 0;
+            anio_pel = 0;
+        }
+
         public int ABM_Peliculas(string v, string accion, Peliculas objPeliculas)
         {
             throw new NotImplementedException();
         }
+
 
         public int Id_pel
         {

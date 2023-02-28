@@ -53,6 +53,7 @@
             this.btnAlta.TabIndex = 0;
             this.btnAlta.Text = "ALTA";
             this.btnAlta.UseVisualStyleBackColor = false;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click_1);
             // 
             // btnBaja
             // 
@@ -77,6 +78,7 @@
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // lblbuscar
             // 
@@ -107,6 +109,7 @@
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // labeltitulo1
             // 
@@ -146,7 +149,6 @@
             // 
             this.dgv_peliculas.AllowUserToAddRows = false;
             this.dgv_peliculas.AllowUserToDeleteRows = false;
-            this.dgv_peliculas.AllowUserToOrderColumns = true;
             this.dgv_peliculas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgv_peliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_peliculas.GridColor = System.Drawing.SystemColors.ActiveBorder;
