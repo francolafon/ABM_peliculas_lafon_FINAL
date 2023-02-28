@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.btnAlta = new System.Windows.Forms.Button();
-            this.btnBaja = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.lblbuscar = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnSalir = new System.Windows.Forms.Button();
             this.labeltitulo1 = new System.Windows.Forms.Label();
-            this.labelTextoAdvertencia = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dgv_peliculas = new System.Windows.Forms.DataGridView();
+            this.btn_baja_pel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_peliculas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,18 +53,6 @@
             this.btnAlta.Text = "ALTA";
             this.btnAlta.UseVisualStyleBackColor = false;
             this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click_1);
-            // 
-            // btnBaja
-            // 
-            this.btnBaja.BackColor = System.Drawing.Color.IndianRed;
-            this.btnBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnBaja.Location = new System.Drawing.Point(232, 110);
-            this.btnBaja.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnBaja.Name = "btnBaja";
-            this.btnBaja.Size = new System.Drawing.Size(184, 42);
-            this.btnBaja.TabIndex = 1;
-            this.btnBaja.Text = "BAJA";
-            this.btnBaja.UseVisualStyleBackColor = false;
             // 
             // btnModificar
             // 
@@ -123,19 +110,6 @@
             this.labeltitulo1.TabIndex = 8;
             this.labeltitulo1.Text = "CINECLUB";
             // 
-            // labelTextoAdvertencia
-            // 
-            this.labelTextoAdvertencia.AutoSize = true;
-            this.labelTextoAdvertencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTextoAdvertencia.ForeColor = System.Drawing.Color.Red;
-            this.labelTextoAdvertencia.Location = new System.Drawing.Point(399, 212);
-            this.labelTextoAdvertencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTextoAdvertencia.Name = "labelTextoAdvertencia";
-            this.labelTextoAdvertencia.Size = new System.Drawing.Size(732, 13);
-            this.labelTextoAdvertencia.TabIndex = 9;
-            this.labelTextoAdvertencia.Text = "IMPORTANTE: DEBE SELECCIONAR TODA LA FILA DE LA PELÍCULA QUE DESEA DAR DE BAJA O " +
-    "MODIFICAR ANTES DE APRETAR EL BOTÓN\r\n";
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -156,8 +130,22 @@
             this.dgv_peliculas.Name = "dgv_peliculas";
             this.dgv_peliculas.ReadOnly = true;
             this.dgv_peliculas.RowTemplate.Height = 25;
+            this.dgv_peliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_peliculas.Size = new System.Drawing.Size(1362, 272);
             this.dgv_peliculas.TabIndex = 11;
+            // 
+            // btn_baja_pel
+            // 
+            this.btn_baja_pel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_baja_pel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_baja_pel.Location = new System.Drawing.Point(234, 110);
+            this.btn_baja_pel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_baja_pel.Name = "btn_baja_pel";
+            this.btn_baja_pel.Size = new System.Drawing.Size(184, 42);
+            this.btn_baja_pel.TabIndex = 12;
+            this.btn_baja_pel.Text = "BAJA";
+            this.btn_baja_pel.UseVisualStyleBackColor = false;
+            this.btn_baja_pel.Click += new System.EventHandler(this.btn_baja_pel_Click);
             // 
             // FormMain
             // 
@@ -166,15 +154,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::CP.Properties.Resources._9859bcf103e15c74671b14f350799207;
             this.ClientSize = new System.Drawing.Size(1418, 600);
+            this.Controls.Add(this.btn_baja_pel);
             this.Controls.Add(this.dgv_peliculas);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.labelTextoAdvertencia);
             this.Controls.Add(this.labeltitulo1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblbuscar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAlta);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormMain";
@@ -188,15 +175,14 @@
         #endregion
 
         private System.Windows.Forms.Button btnAlta;
-        private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label lblbuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label labeltitulo1;
-        private System.Windows.Forms.Label labelTextoAdvertencia;
         private DateTimePicker dateTimePicker1;
         private DataGridView dgv_peliculas;
+        private Button btn_baja_pel;
     }
 }

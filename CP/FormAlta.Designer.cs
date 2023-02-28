@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.txt_titulo_pel = new System.Windows.Forms.TextBox();
-            this.txt_id_pel = new System.Windows.Forms.TextBox();
-            this.lbl_id_pel = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.lbl_dir = new System.Windows.Forms.Label();
             this.cb_dir = new System.Windows.Forms.ComboBox();
@@ -45,11 +43,12 @@
             this.lbl_cant = new System.Windows.Forms.Label();
             this.lbl_tit = new System.Windows.Forms.Label();
             this.lbl_anio = new System.Windows.Forms.Label();
-            this.txt_cant = new System.Windows.Forms.TextBox();
             this.btn_alta_pel = new System.Windows.Forms.Button();
             this.btn_cancel1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dtp_pel = new System.Windows.Forms.DateTimePicker();
+            this.nud_cant = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_cant)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_titulo_pel
@@ -59,26 +58,6 @@
             this.txt_titulo_pel.Name = "txt_titulo_pel";
             this.txt_titulo_pel.Size = new System.Drawing.Size(332, 23);
             this.txt_titulo_pel.TabIndex = 0;
-            // 
-            // txt_id_pel
-            // 
-            this.txt_id_pel.Enabled = false;
-            this.txt_id_pel.Location = new System.Drawing.Point(142, 68);
-            this.txt_id_pel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txt_id_pel.Name = "txt_id_pel";
-            this.txt_id_pel.Size = new System.Drawing.Size(117, 23);
-            this.txt_id_pel.TabIndex = 1;
-            // 
-            // lbl_id_pel
-            // 
-            this.lbl_id_pel.AutoSize = true;
-            this.lbl_id_pel.BackColor = System.Drawing.Color.Tan;
-            this.lbl_id_pel.Location = new System.Drawing.Point(44, 71);
-            this.lbl_id_pel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_id_pel.Name = "lbl_id_pel";
-            this.lbl_id_pel.Size = new System.Drawing.Size(90, 15);
-            this.lbl_id_pel.TabIndex = 2;
-            this.lbl_id_pel.Text = "Codigo Pelicula";
             // 
             // lbl_titulo
             // 
@@ -104,6 +83,7 @@
             // 
             // cb_dir
             // 
+            this.cb_dir.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_dir.FormattingEnabled = true;
             this.cb_dir.Location = new System.Drawing.Point(144, 136);
             this.cb_dir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -137,6 +117,7 @@
             // 
             // cb_prod
             // 
+            this.cb_prod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_prod.FormattingEnabled = true;
             this.cb_prod.Location = new System.Drawing.Point(142, 174);
             this.cb_prod.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -157,6 +138,7 @@
             // 
             // cb_cat
             // 
+            this.cb_cat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_cat.FormattingEnabled = true;
             this.cb_cat.Location = new System.Drawing.Point(142, 219);
             this.cb_cat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -228,14 +210,6 @@
             this.lbl_anio.TabIndex = 19;
             this.lbl_anio.Text = "Fecha de estreno";
             // 
-            // txt_cant
-            // 
-            this.txt_cant.Location = new System.Drawing.Point(144, 364);
-            this.txt_cant.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txt_cant.Name = "txt_cant";
-            this.txt_cant.Size = new System.Drawing.Size(117, 23);
-            this.txt_cant.TabIndex = 20;
-            // 
             // btn_alta_pel
             // 
             this.btn_alta_pel.BackColor = System.Drawing.Color.AntiqueWhite;
@@ -276,6 +250,14 @@
             this.dtp_pel.TabIndex = 26;
             this.dtp_pel.ValueChanged += new System.EventHandler(this.dtp_pel_ValueChanged);
             // 
+            // nud_cant
+            // 
+            this.nud_cant.Location = new System.Drawing.Point(142, 365);
+            this.nud_cant.Name = "nud_cant";
+            this.nud_cant.Size = new System.Drawing.Size(120, 23);
+            this.nud_cant.TabIndex = 27;
+            this.nud_cant.ValueChanged += new System.EventHandler(this.nud_cant_ValueChanged);
+            // 
             // FormAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -283,11 +265,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::CP.Properties.Resources.Movie_aesthetic_uwu;
             this.ClientSize = new System.Drawing.Size(532, 586);
+            this.Controls.Add(this.nud_cant);
             this.Controls.Add(this.dtp_pel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_cancel1);
             this.Controls.Add(this.btn_alta_pel);
-            this.Controls.Add(this.txt_cant);
             this.Controls.Add(this.lbl_anio);
             this.Controls.Add(this.lbl_tit);
             this.Controls.Add(this.lbl_cant);
@@ -302,12 +284,11 @@
             this.Controls.Add(this.cb_dir);
             this.Controls.Add(this.lbl_dir);
             this.Controls.Add(this.lbl_titulo);
-            this.Controls.Add(this.lbl_id_pel);
-            this.Controls.Add(this.txt_id_pel);
             this.Controls.Add(this.txt_titulo_pel);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormAlta";
             this.Text = "FormAlta";
+            ((System.ComponentModel.ISupportInitialize)(this.nud_cant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,8 +297,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txt_titulo_pel;
-        private System.Windows.Forms.TextBox txt_id_pel;
-        private System.Windows.Forms.Label lbl_id_pel;
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Label lbl_dir;
         private System.Windows.Forms.ComboBox cb_dir;
@@ -332,11 +311,11 @@
         private System.Windows.Forms.Label lbl_cant;
         private System.Windows.Forms.Label lbl_tit;
         private System.Windows.Forms.Label lbl_anio;
-        private System.Windows.Forms.TextBox txt_cant;
         private System.Windows.Forms.Button btn_alta_pel;
         private System.Windows.Forms.Button btn_cancel1;
         private TextBox textBox1;
         private TextBox lb_id_pel;
         private DateTimePicker dtp_pel;
+        private NumericUpDown nud_cant;
     }
 }

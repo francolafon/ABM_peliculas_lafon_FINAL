@@ -6,16 +6,17 @@ namespace CP
     public partial class FormAlta : Form
     {
         Peliculas peliculas;
-        //NegPeliculas negPeliculas;
         FormMain formMain;
         NegPeliculas negPeliculas = new NegPeliculas();
         NegProductora negProductora = new NegProductora();
         NegDirector negDirector = new NegDirector();
         NegCategoria negCategoria = new NegCategoria();
 
-        public FormAlta()
+        public FormAlta(FormMain Alta)
         {
             InitializeComponent();
+            formMain = Alta;
+            //formMain = new FormMain();
             //llenado de cbx
             LlenarCbxProductoras();
             LlenarCbxDirectores();
@@ -57,23 +58,23 @@ namespace CP
             {
                 int nGrabados = -1;
 
-                //falta terminar calendario
+                //manipulacion de calendario para mandar por parametro
                 DateTime fecha_pel = dtp_pel.Value;
                 string fecha_pel_anio = fecha_pel.ToString("yyyy");
                 int fecha_pel_anio_2 = Int32.Parse(fecha_pel_anio);
-                //
 
-                peliculas = new Peliculas(Convert.ToInt32(cb_dir.SelectedValue), Convert.ToInt32(cb_prod.SelectedValue), Convert.ToInt32(cb_cat.SelectedValue), txt_titulo_pel.Text, txt_desc.Text, Convert.ToInt32(txt_cant.Text), fecha_pel_anio_2);
+                //peliculas = new Peliculas(Convert.ToInt32(cb_dir.SelectedValue), Convert.ToInt32(cb_prod.SelectedValue), Convert.ToInt32(cb_cat.SelectedValue), txt_titulo_pel.Text, txt_desc.Text, Convert.ToInt32(txt_cant.Text), fecha_pel_anio_2);
+                peliculas = new Peliculas(Convert.ToInt32(cb_dir.SelectedValue), Convert.ToInt32(cb_prod.SelectedValue), Convert.ToInt32(cb_cat.SelectedValue), txt_titulo_pel.Text, txt_desc.Text, Convert.ToInt32(nud_cant.Value), fecha_pel_anio_2);
                 nGrabados = negPeliculas.ABM_Pelicula("INSERT", peliculas);
 
                 if (nGrabados == -1)
                 {
-                    MessageBox.Show("No se pudo grabar el Alumno en el sistema", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo grabar el en el sistema", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    //formMain.Cargar_dgv_peliculas();
-                    MessageBox.Show("El alumno fue agregado correctamente.", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    formMain.Cargar_dgv_peliculas();
+                    MessageBox.Show("El  fue agregado correctamente.", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     this.Close();
                 }
             }
@@ -81,6 +82,7 @@ namespace CP
             {
                 MessageBox.Show("ERROR NO ENTRA", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
         }
 
         private void btn_cancel1_Click_1(object sender, EventArgs e)
@@ -121,6 +123,11 @@ namespace CP
             cb_cat.DataSource = negCategoria.ObtenerCategorias();
             cb_cat.ValueMember = "id_categoria";
             cb_cat.DisplayMember = "nomb_categoria";
+        }
+
+        private void nud_cant_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

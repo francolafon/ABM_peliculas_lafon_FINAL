@@ -18,15 +18,10 @@ namespace CP
 
         private void BtnAlta_Click(object sender, EventArgs e)
         {
-            Form formulario = new FormAlta();
+            Form formulario = new FormAlta(this);
             formulario.Show();
         }
-
-        private void BtnBaja_Click(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             Form formulario = new FormModificar();
@@ -116,7 +111,7 @@ namespace CP
 
         private void btnAlta_Click_1(object sender, EventArgs e)
         {
-            Form formulario = new FormAlta();
+            Form formulario = new FormAlta(this);
             formulario.Show();
         }
 
@@ -129,6 +124,32 @@ namespace CP
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //boton baja nuevo
+        private void btn_baja_pel_Click(object sender, EventArgs e)
+        {
+            Peliculas pelicula = new Peliculas();
+                string valor;
+                valor = dgv_peliculas.Rows[dgv_peliculas.CurrentRow.Index].Cells[0].Value.ToString();
+                pelicula.Id_pel = Convert.ToInt32(valor);
+                DialogResult r = MessageBox.Show("¿Quieres eliminar esta pelicula?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (r == DialogResult.Yes)
+                {
+                    int nResultado = -1;
+                    nResultado = ObjPeliculas.ABM_Pelicula("DELETE",pelicula);
+
+                    if (nResultado != -1)
+                    {
+                        Cargar_dgv_peliculas();
+                        MessageBox.Show("La pelicula fue eliminado correctamente.", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error", "Se produjo un error al intentar borrar la película");
+                    }
+                }
         }
     }
 }
